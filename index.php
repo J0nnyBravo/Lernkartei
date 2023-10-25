@@ -35,6 +35,10 @@
 
     // QuestionsNr. ist eine Rnd es sollen 5 zahlen für 5 Fragen gewählt werden
     $questionNumber = 0;
+    echo count($questionsAnswers);
+
+
+
 
 
 ?>
@@ -44,16 +48,65 @@
 
 
 
-
 <form action="index.php" method="post">
+    <?php $questionNumber = rand(0,count($questionsAnswers)) ?>
     <p><?= $questionsAnswers[$questionNumber][0] ?></p>
 
     <div class="<?=$classGreen?>">
-        <input type="radio" name="answer" value="Korrekt" /><?= $questionsAnswers[$questionNumber][1] ?>
+        <label>
+            <input type="radio" name="answer" value="Korrekt"   >
+        </label>
+        <?= $questionsAnswers[$questionNumber][1] ?>
     </div>
     <div class="<?=$classRed?>">
-        <input type="radio" name="answer" value="Falsch"/><?= $questionsAnswers[$questionNumber][2] ?> <br>
-        <input type="radio" name="answer" value="Falsch">/><?= $questionsAnswers[$questionNumber][3] ?> <br>
+        <label>
+            <input type="radio" name="answer" value="Falsch"    >
+        </label>
+        <?= $questionsAnswers[$questionNumber][2] ?> <br>
+        <label>
+            <input type="radio" name="answer" value="Falsch"     >
+        </label>
+        <?= $questionsAnswers[$questionNumber][3] ?> <br>
+    </div>
+    <br>
+    <?php $questionNumber = rand(0,count($questionsAnswers)) ?>
+    <p><?= $questionsAnswers[$questionNumber][0] ?></p>
+
+    <div class="<?=$classGreen?>">
+        <label>
+            <input type="radio" name="answer" value="Korrekt"   >
+        </label>
+        <?= $questionsAnswers[$questionNumber][1] ?>
+    </div>
+    <div class="<?=$classRed?>">
+        <label>
+            <input type="radio" name="answer" value="Falsch"    >
+        </label>
+        <?= $questionsAnswers[$questionNumber][2] ?> <br>
+        <label>
+            <input type="radio" name="answer" value="Falsch"     >
+        </label>
+        <?= $questionsAnswers[$questionNumber][3] ?> <br>
+    </div>
+    <br>
+    <?php $questionNumber = rand(0,count($questionsAnswers)) ?>
+    <p><?= $questionsAnswers[$questionNumber][0] ?></p>
+
+    <div class="<?=$classGreen?>">
+        <label>
+            <input type="radio" name="answer" value="Korrekt"   >
+        </label>
+        <?= $questionsAnswers[$questionNumber][1] ?>
+    </div>
+    <div class="<?=$classRed?>">
+        <label>
+            <input type="radio" name="answer" value="Falsch"    >
+        </label>
+        <?= $questionsAnswers[$questionNumber][2] ?> <br>
+        <label>
+            <input type="radio" name="answer" value="Falsch"     >
+        </label>
+        <?= $questionsAnswers[$questionNumber][3] ?> <br>
     </div>
     <br>
 
